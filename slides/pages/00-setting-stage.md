@@ -22,20 +22,20 @@ layout: default
 heading: Agenda
 ---
 
-<Grid :cols="2" gap="lg" rowGap="lg" class="mt-6">
-  <Card v-click variant="filled">
+<Grid :cols="2" gap="lg" rowGap="lg" align="stretch" class="mt-6">
+  <Card v-click variant="filled" class="h-full">
     <div class="text-lg font-semibold mb-1">01 · Introduction to Modern Observability</div>
     <div class="text-sm opacity-70">What observability means and why it matters today</div>
   </Card>
-  <Card v-click variant="filled">
+  <Card v-click variant="filled" class="h-full">
     <div class="text-lg font-semibold mb-1">02 · Three Pillars Deep Dive</div>
     <div class="text-sm opacity-70">Logs, Metrics, and Traces in practice</div>
   </Card>
-  <Card v-click variant="filled">
+  <Card v-click variant="filled" class="h-full">
     <div class="text-lg font-semibold mb-1">03 · Distributed Tracing</div>
     <div class="text-sm opacity-70">Following requests across services end-to-end</div>
   </Card>
-  <Card v-click variant="filled">
+  <Card v-click variant="filled" class="h-full">
     <div class="text-lg font-semibold mb-1">04 · Best Practices and Wrap</div>
     <div class="text-sm opacity-70">Hands-on patterns, Q&A, and takeaways</div>
   </Card>

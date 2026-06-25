@@ -230,7 +230,7 @@ heading: Exercise — Your First Alert
     Navigate to <strong>Alerts &amp; Anomaly Detection</strong> in your environment.
   </StepperItem>
   <StepperItem title="Create a metric alert" accent="teal">
-    Target the <code>http.server.request.duration</code> metric for your service. Set the aggregation to <strong>p99</strong>.
+    Search for a request duration metric for your service and select it. Set the aggregation to <strong>p99</strong>.
   </StepperItem>
   <StepperItem title="Configure a sliding window" accent="teal">
     Set the evaluation window to <strong>5 minutes</strong> and the threshold to <strong>500ms</strong>.

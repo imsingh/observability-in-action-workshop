@@ -13,40 +13,27 @@ layout: default
 heading: A Simple System
 ---
 
-```mermaid {scale: 1.8}
-flowchart LR
-  U([User]) --> S([Server])
-```
+<Center>
+  <img :src="'/diagrams/diagram-p4-04.png'" class="max-h-80 object-contain" />
+</Center>
 
 ---
 layout: default
 heading: It Gets More Complex
 ---
 
-```mermaid {scale: 1.4}
-flowchart LR
-  U([User]) --> LB([Load Balancer])
-  LB --> S1([Service Instance 1])
-  LB --> S2([Service Instance 2])
-  S1 --> DB([DB])
-  S2 --> DB
-```
+<Center>
+  <img :src="'/diagrams/diagram-p5-05.png'" class="max-h-80 object-contain" />
+</Center>
 
 ---
 layout: default
 heading: Even More Complex
 ---
 
-```mermaid {scale: 1.4}
-flowchart LR
-  U([User]) --> LB([Load Balancer])
-  LB --> S1([Service Instance 1])
-  LB --> S2([Service Instance 2])
-  S1 --> DB([DB])
-  S2 --> DB
-  S1 --> H([Infra / Host])
-  S2 --> H
-```
+<Center>
+  <img :src="'/diagrams/diagram-p6-06.png'" class="max-h-80 object-contain" />
+</Center>
 
 ---
 layout: statement

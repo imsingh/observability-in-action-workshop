@@ -11,22 +11,15 @@ Following requests across services end-to-end
 ---
 layout: default
 heading: The Request Journey
+clicks: 3
 ---
 
-<Timeline color="teal" class="mt-10">
-  <TimelineItem v-click title="Frontend / Device">
-    User triggers a request
-  </TimelineItem>
-  <TimelineItem v-click title="Load Balancer">
-    Routes to the right service
-  </TimelineItem>
-  <TimelineItem v-click title="Service A / B">
-    Handles business logic
-  </TimelineItem>
-  <TimelineItem v-click title="Database">
-    Reads or writes data
-  </TimelineItem>
-</Timeline>
+<div class="relative mt-2">
+  <img v-if="$clicks === 0" :src="'/diagrams/trace-flow-p20-20.png'" class="max-h-[307px] object-contain mx-auto" />
+  <img v-if="$clicks === 1" :src="'/diagrams/trace-flow-p21-21.png'" class="max-h-[307px] object-contain mx-auto" />
+  <img v-if="$clicks === 2" :src="'/diagrams/trace-flow-p22-22.png'" class="max-h-[307px] object-contain mx-auto" />
+  <img v-if="$clicks >= 3" :src="'/diagrams/trace-flow-p23-23.png'" class="max-h-[307px] object-contain mx-auto" />
+</div>
 
 ---
 layout: default
