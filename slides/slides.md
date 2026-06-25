@@ -48,6 +48,10 @@ src: ./pages/03-distributed-tracing.md
 ---
 
 ---
+src: ./pages/04-intelligent-alerting.md
+---
+
+---
 src: ./pages/04-best-practices-and-wrap.md
 ---
 

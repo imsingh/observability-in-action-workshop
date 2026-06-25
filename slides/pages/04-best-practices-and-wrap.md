@@ -1,7 +1,7 @@
 ---
 layout: section
-number: 4
-chip: Section 04
+number: 5
+chip: Section 05
 ---
 
 # Best Practices and Wrap
@@ -22,6 +22,9 @@ heading: What We Covered
   </StepperItem>
   <StepperItem title="Distributed Tracing" accent="teal">
     How requests travel through systems, why isolated logs fail, and how W3C Trace Context solves it
+  </StepperItem>
+  <StepperItem title="Intelligent Alerting" accent="teal">
+    Static thresholds, sliding windows, adaptive baselines, and how to avoid alert fatigue
   </StepperItem>
   <StepperItem title="Best Practices" accent="teal">
     Responsible telemetry, sensitive data, and cost-aware collection strategies
