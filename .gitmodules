@@ -1,0 +1,3 @@
+[submodule "observability_project"]
+	path = observability_project
+	url = https://github.com/dani-coll/observability_project
