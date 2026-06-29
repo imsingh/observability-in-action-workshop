@@ -118,45 +118,41 @@ layout: default
 heading: Baseline and Adaptive Thresholds
 ---
 
-<Grid :cols="2" gap="md" class="mt-2">
-  <Stack gap="sm">
-    <Card variant="filled" padding="sm">
-      <div class="font-semibold text-sm mb-1">How it works</div>
-      <p class="text-xs">The system observes historical data across hours, days, and weeks, then builds a model of expected behaviour. Alerts fire when the signal deviates beyond a confidence band.</p>
-    </Card>
-    <Card v-click variant="tonal" padding="sm">
-      <div class="font-semibold text-sm mb-1">Why it matters</div>
-      <Stack gap="xs" class="text-xs">
-        <div>Traffic is lower at 3 AM — the threshold adjusts automatically</div>
-        <div>Monday morning spikes are expected — no false alert</div>
-        <div>A real anomaly at any hour still triggers</div>
-      </Stack>
-    </Card>
-  </Stack>
-  <Stack gap="sm">
-    <Card v-click variant="tonal" padding="sm">
-      <div class="flex items-center gap-2 mb-1">
-        <span class="i-ph-warning-bold w-4 h-4 text-current" />
-        <span class="font-semibold text-xs">Trade-offs</span>
-      </div>
-      <Stack gap="xs" class="text-xs">
-        <div>Requires weeks of data to train reliably</div>
-        <div>Harder to explain why an alert fired</div>
-        <div>Can learn the wrong baseline if the system was already degraded</div>
-      </Stack>
-    </Card>
-    <Card v-click variant="tonal" padding="sm">
-      <div class="flex items-center gap-2 mb-1">
-        <span class="i-ph-lightbulb-bold w-4 h-4 text-current" />
-        <span class="font-semibold text-xs">Best used for</span>
-      </div>
-      <Stack gap="xs" class="text-xs">
-        <div>Business metrics with clear daily or weekly patterns</div>
-        <div>Error rates where an absolute threshold is hard to define</div>
-        <div>Complementing static thresholds, not replacing them</div>
-      </Stack>
-    </Card>
-  </Stack>
+<Grid :cols="2" gap="md" rowGap="sm" align="stretch" class="mt-2 auto-rows-fr h-[310px]">
+  <Card variant="filled" padding="sm">
+    <div class="font-semibold text-sm mb-1">How it works</div>
+    <p class="text-xs">The system observes historical data across hours, days, and weeks, then builds a model of expected behaviour. Alerts fire when the signal deviates beyond a confidence band.</p>
+  </Card>
+  <Card v-click="2" variant="tonal" padding="sm">
+    <div class="flex items-center gap-2 mb-1">
+      <span class="i-ph-warning-bold w-4 h-4 text-current" />
+      <span class="font-semibold text-xs">Trade-offs</span>
+    </div>
+    <Stack gap="xs" class="text-xs">
+      <div>Requires weeks of data to train reliably</div>
+      <div>Harder to explain why an alert fired</div>
+      <div>Can learn the wrong baseline if the system was already degraded</div>
+    </Stack>
+  </Card>
+  <Card v-click="1" variant="tonal" padding="sm">
+    <div class="font-semibold text-sm mb-1">Why it matters</div>
+    <Stack gap="xs" class="text-xs">
+      <div>Traffic is lower at 3 AM — the threshold adjusts automatically</div>
+      <div>Monday morning spikes are expected — no false alert</div>
+      <div>A real anomaly at any hour still triggers</div>
+    </Stack>
+  </Card>
+  <Card v-click="3" variant="tonal" padding="sm">
+    <div class="flex items-center gap-2 mb-1">
+      <span class="i-ph-lightbulb-bold w-4 h-4 text-current" />
+      <span class="font-semibold text-xs">Best used for</span>
+    </div>
+    <Stack gap="xs" class="text-xs">
+      <div>Business metrics with clear daily or weekly patterns</div>
+      <div>Error rates where an absolute threshold is hard to define</div>
+      <div>Complementing static thresholds, not replacing them</div>
+    </Stack>
+  </Card>
 </Grid>
 
 ---

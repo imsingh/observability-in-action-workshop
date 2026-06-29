@@ -163,3 +163,26 @@ layout: statement
 ---
 
 One request. One trace ID. **Every subsystem.** No manual dot-connecting.
+
+---
+layout: default
+heading: Exercise — Follow a Trace End-to-End
+---
+
+<Stepper showAll class="mt-4">
+  <StepperItem title="Open your browser DevTools" accent="teal">
+    Load the app, open the <strong>Network</strong> tab, and trigger a request (e.g. place an order).
+  </StepperItem>
+  <StepperItem title="Find the traceparent header" accent="teal">
+    Select one request and inspect its <strong>Request Headers</strong>. Locate <code>traceparent</code> — it looks like <code>00-4bf92f3577b34da6a3ce929d0e0e4736-00f067aa0ba902b7-01</code>.
+  </StepperItem>
+  <StepperItem title="Extract the trace ID" accent="teal">
+    The trace ID is the <strong>second segment</strong> — the 32-character hex string between the version and the parent ID. Copy it.
+  </StepperItem>
+  <StepperItem title="Open Distributed Traces in Dynatrace" accent="teal">
+    Navigate to the <strong>Distributed Traces</strong> app and paste your trace ID into the filter to find the exact trace.
+  </StepperItem>
+  <StepperItem title="Investigate the trace" accent="teal">
+    Open the waterfall view. Follow the request across every hop — which service was slowest? Where was time spent? Was there an error?
+  </StepperItem>
+</Stepper>
